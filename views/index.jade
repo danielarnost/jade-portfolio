@@ -1,5 +1,80 @@
-extends layout
+extends ./layout.jade
 
 block content
-  h1= title
-  p Welcome to #{title}
+    body#pagetop   
+      .parallax.animsition   
+      br
+      br
+      br
+      br
+      br
+      .strip
+        #top.inner
+          .centered
+            .tagline
+              span
+                h1
+                  em Daniel Arnost  
+                h1 Austin Based Web Developer 
+          br
+          .header
+            #face-div(align='center')
+              img(style='opacity:1;', src='/static/images/facebook-headshot-crop.png')
+            .intro-text
+              h1
+                em  Scientist, Web Developer, Design Enthusiast.
+      br
+      .container-fluid
+        #aspiration.row
+          .col-md-12
+            h2#ethos
+              em Ethos:
+            p.container-text
+              | A passion for learning and strong background in earth science, (M.S. in Geosciences from UT Austin) has given me the ability to be a self-motivated researcher who can present complex data and concepts that convey concice, compelling content to the public.
+            p.container-text
+              | I am also a minimalist design and art enthusiast which allows me to build code-effcient, content-rich web sites that have minimum frills, sleek design, and provide clients with a pleasurable user experience.
+            p.container-text
+              | My experience at the Coding bootcamp at UT Austin and personal research has allowed me to build more fun, user-interacitve UX/UI design features to suit the client's needs.
+      br
+      .container-fluid
+        #skillz.row
+          .col-md-12
+            h2(align='right')
+              em Skills
+            p.container-text
+              | My time at the Coding Bootcamp at UT Austin has given me an introduction to a range of full stack (primary focus on MERN stack) skills  including HTML, CSS, javascript libraries, NodeJS, MySQL, MongoDB, react, among others. I am excited to keep learning new skills as well as perfecting my old ones.
+            .skillBadges
+              img(src='../assets/images/JSimage.png')
+              img(src='../assets/images/HTML5_Logo_512.png', width='128em')
+              img(src='../assets/images/CSS3.png')
+              img(src='../assets/images/JS.png.svg')            
+        br
+        .container-fluid
+          .col-md-12
+            form.form-horizontal(action='/submit', method='post')
+              .form-group
+                input#name.form-control.col-md-9(type='text', name='name', placeholder='Your Name')
+              .form-group
+                input#name.form-control.col-md-9(type='email', name='email', placeholder='Your Email')
+              .form-group
+                textarea#commentArea.form-control.col-md-9(type='text', name='message', placeholder='Your Comments')
+              .form-group
+                // <input type="submit" value="Submit">
+                button#submit.btn.btn-default.pull-right(type='submit', action='contact/submit', value='Submit')
+                  i.glyphicon.glyphicon-send
+        .popbox
+          a.open(href='#') Click Here!
+          .collapse
+            .box
+              .arrow
+              .arrow-border
+              |               Follow my coding progress on twitter!
+              a.close(href='#') close
+        // end popbox
+        .whitespace
+    script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=', crossorigin='anonymous')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='../js/animsition/animsition.min.js')
+    script(type='text/javascript', src='../js/animsition.js')
+    script(type='text/javascript', src='../js/logic.js')
+    script(type='text/javascript', charset='utf-8', src='popbox.js')
