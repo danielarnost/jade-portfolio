@@ -1,8 +1,19 @@
 doctype html
 html(lang="en")
     include ./partials/_head.jade
-    block content
+    
+    
       
     body#page-top
+
       include ./partials/_nav.jade
       block content
+
+      
+      script(src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous")
+      script(src='/static/javascripts/bootstrapjs/bootstrap.js')
+      script(src='/static/javascripts/portfoliologic/badges.js')
+      
+      script(src='/static/javascripts/animsition/animsition.min.js')
+
+      

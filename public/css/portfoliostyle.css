@@ -1,104 +1,79 @@
 /*index---------------*/
 html, body {
-
-
-/*	background-color: 	 #6D92A0 ;*/
-/*background-image: url("./assets/images/free-wallpaper-59.jpg");*/
-/*height:100%;*/	
-	
+background-image: url("/static/images/minback-2.jpg");
+height: 100%; 
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;	
 }
-
-#skillz p{
-font-family: 'Source Sans Pro:400', sans-serif;
-
-}
-.parallax {
-    /* The image used */
-    background-image: url("../images/greyscale1.jpg");
-
-    /* Set a specific height */
-    height: 100%; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
+/*navbar*/
 #navbar{
-	 background: #d3d3d3;
-	margin-bottom:-20px;
-	 color: #fff;
-	 align-items: center;
+	height:6px;	 
+	border-bottom: 2px solid rgba(140, 0, 26, 1);
+	background-color: black;
+	align-items: center;
   justify-content: center ;
 }
+
 #skills-header{
 font-family: 'Titillium Web', sans-serif;
 }
 
-#name {
-	
-
-
-margin-top:0.3em ;
-}
 .twitter{
-margin-top:.1em;
+padding-top:.15rem;
 
-}
-#email {
-/*margin-top:0.1em ;*/
-}
-/*#brandname {
-	margin-top:1.4rem;
-}*/
-ul li:hover {
-	background: #555;
-}
+}	
 
-#commentArea{
-	color:white;
+
+ul li a {
+margin-top: -.4rem;
+
 }
 
 
-/*#cell{
-	margin-right:0;
+ul li img:hover {
+	opacity: 0.5;
+}
+h5{
+	font-size:1.5rem;
+	margin-bottom: 0.5rem;
+}
+h5:hover {
+
 color:white;
-margin-top:2rem;
-}*/
+}
 
 
 
 
-
-	
 
 .strip {
-	padding:2rem 1rem;	
+/*	padding:2rem 1rem;	
 	background: rgba(112, 143, 163, 0.5);
 	border-top: 1px solid #fff;
 	width: 80%;
 	margin:  auto;
-	border-radius-top: 1%;
-	border-radius-bottom:3%;
-	-webkit-border-radius: 1%;
-	-moz-border-radius: 1%;
-	-o-border-radius: 1%;
+	border-radius-top: 10%;
+	border-radius-bottom:10%;
+	-webkit-border-radius: 2rem;
+	-webkit-border-bottom: 3%;
+	-moz-border-radius: 5%;
+	-o-border-radius: 5%;
 	box-shadow:  0 15px 20px -12px rgba(0, 0, 0, 0.8);
-	text-align:center;
+	text-align:center;*/
 
-
+background: url('/static/images/coffeebackground.png') no-repeat center  ;
+box-shadow:  0 15px 20px -12px rgba(0, 0, 0, 0.8);
+border: 1px solid rgba(140, 0, 26, 1);
+text-align:center;
+width: 70%;
+margin: auto;
+color:black;
 }
 
-.tagline h1 {
-	font-size: 3rem;
-	background-color: rgba(100, 100, 100, 0);
-	display: inline-block;
-	padding: 14px 36px;
-	margin-top: 0;
-	font-family: 'Source Sans Pro', sans-serif;
-}
+
 .inner {
 
 	
@@ -123,19 +98,18 @@ margin-top:2rem;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%; 
-	border: 3px solid rgba(112, 143, 163, 1) ; /* need rgba*/
+	border: 2px solid rgba(0, 0, 0, 1) ; /* need rgba*/
 	z-index:50;
 	text-align: center;
 }
 
-.intro-text h1, 
-.tagline h1 {
-	color: white;
+.intro-text h2{
+	color: black;
 	text-align: center;
 	font-family:  'Titillium Web', sans-serif;
-		font-size: 3rem;
+		
   font-weight: bold;
-
+	letter-spacing: 0.5rem;
 }
 
 
@@ -144,6 +118,7 @@ margin-top:2rem;
 	-webkit-animation: text-shadow-pop-top 0.6s both;
 	-moz-animation: text-shadow-pop-top 0.6s both;
 	animation: text-shadow-pop-top 0.6s both;
+	font-family:  'Titillium Web', sans-serif;
 }
 
 .centered {
@@ -163,7 +138,7 @@ margin-top:2rem;
 #aspiration{
 margin:auto;
 width: 90%;
-background: rgba(112, 143, 163, 0.5);
+background: rgba(231,229,229, 0.9);
 box-shadow:  0 15px 20px -12px rgba(0, 0, 0, 0.8);
 border-radius: 0.5rem;
 /*	-webkit-border-radius: 1%;
@@ -179,13 +154,15 @@ font-weight:bold;
 }
 
 #aspiration p{
-color: #6D92A0;
+color: black;
 }
-
+#ethos h2{
+	color:rgba(231,229,229, 0.9);
+}
 
 #skillz{
 	color: #6D92A0;
-background-color:teal;
+background-color:
 opacity:0.5;
 	width: 100%;
 	background: rgb(50, 50, 50);
@@ -195,7 +172,10 @@ opacity:0.5;
 /*font-family: 'Titillium Web', sans-serif;*/
 
 }
+#skillz p{
+font-family: 'Source Sans Pro:400', sans-serif;
 
+}
 .card-img-top {
 	width: 100%;
 }
@@ -235,6 +215,9 @@ button.btn.btn-primary {
 	border-radius: 0;
 	color: white;
 	width: 100%;
+}
+#commentArea{
+	color:white;
 }
 
 .form-group textarea {

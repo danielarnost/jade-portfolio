@@ -1,0 +1,3 @@
+Trying to convert HTML to jade.
+
+	It has worked (loaded on host) when "extends" "block content" and "doctype" are taken out.

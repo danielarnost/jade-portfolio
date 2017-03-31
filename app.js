@@ -1,15 +1,22 @@
-'use strict'
-const express  = require("express"),
-  nodemailer   = require("nodemailer"),
-  bodyParser   = require("body-parser"),
-  cookieParser = require('cookie-parser'),
-  logger       = require("morgan"),
-  mongoose     = require("mongoose"),
-  path         = require('path');	  
 
-const app = express();
+var express  = require("express");
+var nodemailer   = require("nodemailer");
+ var bodyParser   = require("body-parser");
+ var cookieParser = require('cookie-parser');
+ var logger       = require("morgan");
+ var mongoose     = require("mongoose");
+ var path         = require('path');	  
+// var routes       = require('./routes/routes.js');
+//contact form submission mongoose
+     var Example   = require("./models/mongooseModel.js")
+     var Promise   = require("bluebird");
+  mongoose.Promise = Promise;
+
+var app = express();
 //middleware
+
 app.use('/static', express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname + 'css')));
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -17,22 +24,66 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 
+app.get('/', function(req, res){
+  res.render('index');
+});
+
+app.get('/work', function(req, res){ 
+    res.render('work'); 
+});
+app.get('/contact', function(req, res){ 
+    res.render('contact'); 
+});
+
+app.use(express.static('models'));
+
+
+app.post("/contact/submit", function(req, res, next) {
+
+  // Inserting an array and a boolean into the req.body object for example purposes
+  req.body.array = ["item1", "item2", "item3"];
+  // Remember, we have to specify booleans on the server--the front-end can only send strings
+  req.body.boolean = false;
+
+  // We use the "Example" class we defined above
+  // to check our req.body against our Example model
+  var content = new Example(req.body);
+
+  // With the new Example object created, we can save our data to mongoose
+  // Notice the different syntax. The magic happens in exampleModel.js
+  content.save(function(error, doc) {
+    // Send any errors to the browser
+    if (error) {
+      res.send(503);
+      
+    }
+    // Otherwise, send the new doc to the browser
+    else {
+      res.send(doc);
+      res.redirect('/index');
+    
+    }
+  });
+});
+mongoose.connect("mongodb://localhost/portfoliojade");
+var db = mongoose.connection;
+
+db.on("error", function(error) {
+  console.log("Mongoose Error: ", error);
+});
+
+db.once("open", function() {
+  console.log("Mongoose connection successful.");
+});
+
+
+
+
 //templates
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 
-
-
-
-//main routes
-app.get('/', function(req, res){
-	res.render('index');
-});
-
-app.get('/work', function(req, res){ 
-		res.render('work');	
-});
-
+//server function
 app.listen(3000, function() {
 	console.log("The frontend server is running on port 3000!");
 });
