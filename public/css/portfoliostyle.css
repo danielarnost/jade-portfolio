@@ -156,13 +156,13 @@ font-weight:bold;
 #aspiration p{
 color: black;
 }
-#ethos h2{
-	color:rgba(231,229,229, 0.9);
+em{
+	color:black;
 }
 
 #skillz{
 	color: #6D92A0;
-background-color:
+background-color:rgba(	7,8,9,0.5);
 opacity:0.5;
 	width: 100%;
 	background: rgb(50, 50, 50);
