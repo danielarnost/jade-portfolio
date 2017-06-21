@@ -1,6 +1,9 @@
+
+
+alert(hi);
 //form submition
 
-$('form').submit(function(evt) {
+$('.formgroup').submit(function(evt) {
 evt.preventDefault();
 var url = $(this).attr("action")
 var formData = $ (this).serialize();
@@ -10,7 +13,7 @@ $.post (url, formData, function(response) {
 
 });
 
-$('form').submit(function(evt) {
+$('.formgroup').submit(function(evt) {
 evt.preventDefault();
 var url = $(this).attr("action")
 var formData = $ (this).serialize();
@@ -30,3 +33,7 @@ success : function (response) {
  $(document).ready(function(){
              $('.twitter').popbox();
            });
+
+
+//animsition plugin page transition
+ $('animsition').animsiton();

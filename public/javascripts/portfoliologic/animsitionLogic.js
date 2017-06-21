@@ -1,14 +1,13 @@
 
 
-	$(".animsition").animsition({
-
-	inClass: 'fade-in',
-	outclass: 'fade-out',
-	inDuration: 800,
-	outDuration: 800
-	});
-
-
+	
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'fade-in-left-lg',
+    outClass: 'fade-out-left-lg'
+    
+  })
+})
 // }); //end doc ready animation
 // 	$(".animsition-link").click(function(){
 	// 	$(".animsition-overlay").animsition({
