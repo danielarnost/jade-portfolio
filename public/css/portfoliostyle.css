@@ -26,7 +26,7 @@ padding-top:.15rem;
 
 ul li a {
 margin-top: -.4rem;
-
+padding-right: 	-1rem;
 }
 
 
@@ -41,10 +41,6 @@ h5:hover {
 
 color:white;
 }
-
-
-
-
 
 .strip {
 /*	padding:2rem 1rem;	
@@ -69,15 +65,8 @@ width: 70%;
 margin: auto;
 color:black;
 }
-
-
-.inner {
-
-	
+.inner {	
 	display: inline-block;
-	
-
-
 /*	background-image: url('../images/gradient2.png');*/
 	/*background: url('../images/gradient4.jpg') no-repeat center;
 	background-size:cover;
@@ -109,8 +98,6 @@ color:black;
 	letter-spacing: 0.5rem;
 }
 
-
-
 .tagline h1 {
 	-webkit-animation: text-shadow-pop-top 0.6s both;
 	-moz-animation: text-shadow-pop-top 0.6s both;
@@ -132,6 +119,32 @@ color:black;
 	font-size: 120%;
 	text-align: justify;
 }
+
+/*CAROUSEL STYLES-------------------------------------------*/
+#slick{
+width:100%;
+background-color: rgba(128, 21, 21, .8);
+border-top:1px solid black;
+border-bottom: 	1px solid black;
+}
+
+#carousel-title{
+	font-family: 'Ubuntu', sans-serif;
+
+	line-height: 1.5;
+	border-bottom: 1px solid black;
+	color: white;
+}
+.slides h3{
+
+font-style: italic;
+font-family: 'Ubuntu', sans-serif;
+/*color: rgba(119,119,119,0.7);*/
+color:white;
+}
+
+/*-----------------------bottom ethos description----------------*/
+
 #aspiration{
 margin:auto;
 width: 90%;
@@ -159,14 +172,16 @@ border-bottom: 1px solid rgba(140, 0, 26, 1);
 
 #aspiration p{
 color: black;
+font-family: 'Ubuntu', sans-serif;
 }
 
+/*--------------------------------------------------------*/
 /*work page*/
 #skills-header{
 font-family: 'Titillium Web', sans-serif;
 }
 #skillz{
-color: #777;
+color: rgba(119,119,119);
 opacity: 	0.7;
 background-color:rgba(	7,8,9,0.5);
 
@@ -313,4 +328,11 @@ input {
 	-webkit-animation: flip-diagonal-2-br 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 	-moz-animation: flip-diagonal-2-br 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 	animation: flip-diagonal-2-br 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+
+/*FORM PAGE-----------------------------------------------------*/
+.slides-contact{
+
+
 }

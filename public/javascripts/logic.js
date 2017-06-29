@@ -1,9 +1,6 @@
-
-
-alert(hi);
 //form submition
 
-$('.formgroup').submit(function(evt) {
+$('form').submit(function(evt) {
 evt.preventDefault();
 var url = $(this).attr("action")
 var formData = $ (this).serialize();
@@ -13,7 +10,7 @@ $.post (url, formData, function(response) {
 
 });
 
-$('.formgroup').submit(function(evt) {
+$('form').submit(function(evt) {
 evt.preventDefault();
 var url = $(this).attr("action")
 var formData = $ (this).serialize();
@@ -35,5 +32,3 @@ success : function (response) {
            });
 
 
-//animsition plugin page transition
- $('animsition').animsiton();

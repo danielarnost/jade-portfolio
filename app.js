@@ -1,11 +1,11 @@
 
-var express  = require("express");
-var nodemailer   = require("nodemailer");
- var bodyParser   = require("body-parser");
- var cookieParser = require('cookie-parser');
- var logger       = require("morgan");
- var mongoose     = require("mongoose");
- var path         = require('path');	  
+var express       = require("express");
+var nodemailer    = require("nodemailer");
+var bodyParser   = require("body-parser");
+var cookieParser = require('cookie-parser');
+var logger       = require("morgan");
+var mongoose     = require("mongoose");
+var path         = require('path');	  
 // var routes       = require('./routes/routes.js');
 //contact form submission mongoose
      var Example   = require("./models/mongooseModel.js")
@@ -39,7 +39,7 @@ app.use(express.static('models'));
 
 
 app.post("/contact/submit", function(req, res, next) {
-
+ 
   // Inserting an array and a boolean into the req.body object for example purposes
   req.body.array = ["item1", "item2", "item3"];
   // Remember, we have to specify booleans on the server--the front-end can only send strings
@@ -54,14 +54,12 @@ app.post("/contact/submit", function(req, res, next) {
   content.save(function(error, doc) {
     // Send any errors to the browser
     if (error) {
-      res.send(503);
-      
-    }
-    // Otherwise, send the new doc to the browser
-    else {
-      res.send(doc);
-      res.redirect('/index');
-    
+      //add try again
+      res.redirect('/contact')
+          }
+    // Otherwise, send the new doc to the browserTOOK THIS ( res.send(doc);) OUT, STILL STORES IN MONGODB
+    else {      
+      res.redirect('/');    
     }
   });
 });
@@ -75,9 +73,6 @@ db.on("error", function(error) {
 db.once("open", function() {
   console.log("Mongoose connection successful.");
 });
-
-
-
 
 //templates
 app.set('view engine', 'jade');

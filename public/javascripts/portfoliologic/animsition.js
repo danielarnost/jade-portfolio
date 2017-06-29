@@ -1,13 +1,23 @@
 
+//animsition
+	$(".animsition").animsition({
 
-	
-$(document).ready(function() {
-  $(".animsition").animsition({
-    inClass: 'fade-in-left-lg',
-    outClass: 'fade-out-left-lg'
-    
-  })
-})
+	inClass: 'fade-in',
+	outclass: 'fade-out',
+	inDuration: 800,
+	outDuration: 800
+	});
+
+
+//slick
+$('.slides').slick({
+	fade: true,
+	autoplay: true,
+	arrows: false,
+	dots: true
+
+	});
+
 // }); //end doc ready animation
 // 	$(".animsition-link").click(function(){
 	// 	$(".animsition-overlay").animsition({

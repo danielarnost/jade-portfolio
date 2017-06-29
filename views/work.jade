@@ -1,14 +1,13 @@
 extends ./layout.jade
 
 block content
-    body#pagetop.animsition   
-         
+      #pagetop     
       br
       br
       br
       br
       br
-      .container-fluid
+      .container-fluid.animsition
         #skillz.row
           .col-md-12
             h2#skills-header(align='right')
@@ -82,8 +81,7 @@ block content
                   | This app uses MySQL and Express to create a full stack app that creates and destroys burgers.
               a.btn.btn-primary(href='https://aqueous-fjord-81672.herokuapp.com') Heroku Deploy
         br
-        br
-        img(src='../assets/images/rightArrow.svg')
+        br        
         br
         .container-fluid
           .row

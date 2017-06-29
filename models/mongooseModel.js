@@ -36,16 +36,16 @@ var mongooseSchema = new Schema({
   // },
   // Notice the validate array in this sub-object
   // This lets us make customized validation functions for our model
-  body: {
+ longstring: {
     type: String,
     validate: [
       // Function takes in the value as an argument
       function(input) {
         // If this returns true, proceed. If not, return an error message
-        return input.length >= 3;
+        return input.length >= 6;
       },
       // Error Message
-      "A message of 3 characters or more is required"
+      "Longstring should be longer."
     ]
   }
 });
