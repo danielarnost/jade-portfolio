@@ -8,9 +8,12 @@ var mongoose     = require("mongoose");
 var path         = require('path');	  
 // var routes       = require('./routes/routes.js');
 //contact form submission mongoose
-     var Example   = require("./models/mongooseModel.js")
-     var Promise   = require("bluebird");
-  mongoose.Promise = Promise;
+var Example   = require("./models/mongooseModel.js")
+var Promise   = require("bluebird");
+
+var PORT = process.env.PORT || 3000;
+
+mongoose.Promise = Promise;
 
 var app = express();
 //middleware
@@ -79,6 +82,6 @@ app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 
 //server function
-app.listen(3000, function() {
-	console.log("The frontend server is running on port 3000!");
+app.listen(PORT, function() {
+  console.log("App running on port 3000!");
 });
