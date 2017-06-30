@@ -20,10 +20,11 @@ block content
               // <input type="submit" value="Submit">
               button#submit.btn.btn-default.pull-right(type='submit', action='contact/submit', value='Submit')
                 i.glyphicon.glyphicon-send
-          br
-          
-          .slides-contact
-            h1.text-center Field Geology in Switzerland and Greece
+        br
+        .container-fluid#contact-carousel
+        h1#carousel-title.text-center Personal Interests           
+          .slides
+            //- h1.text-center Field Geology in Switzerland and Greece
             .slide1 
               .grid-half 
                 img( src='/static/images/greece2.jpg' style="border: 2px solid rgba(140, 0, 26, 1); height:40rem; margin:0 auto")

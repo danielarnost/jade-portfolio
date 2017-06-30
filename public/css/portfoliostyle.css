@@ -109,12 +109,12 @@ color:black;
 	text-align: center;
 }
 
-.container-fluid {
+/*.container-fluid {
 	width: 85%;
 	max-width: 1024px;
 	margin: 0 auto;
 }
-
+*/
 .container-text {
 	font-size: 120%;
 	text-align: justify;
@@ -126,6 +126,7 @@ width:100%;
 background-color: rgba(128, 21, 21, .8);
 border-top:1px solid black;
 border-bottom: 	1px solid black;
+
 }
 
 #carousel-title{
@@ -284,6 +285,16 @@ input {
 .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: white;
 }
+
+/*CONTACT CAROUSEL------------------------------------------------*/
+
+h1#carousel-title.text-center {
+	color :black;
+}
+
+
+
+
 
 @media screen and (max-width: 992px) {
 	.whitespace {
