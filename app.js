@@ -66,7 +66,9 @@ app.post("/contact/submit", function(req, res, next) {
     }
   });
 });
-mongoose.connect("mongodb://localhost/portfoliojade");
+// mongoose.connect("mongodb://localhost/portfoliojade");
+mongoose.connect("mongodb://danielryan:danielryan@ds145312.mlab.com:45312/portfoliojade", {useMongoClient: true});
+
 var db = mongoose.connection;
 
 db.on("error", function(error) {
