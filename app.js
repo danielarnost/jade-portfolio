@@ -5,6 +5,7 @@ var bodyParser   = require("body-parser");
 var cookieParser = require('cookie-parser');
 var logger       = require("morgan");
 var mongoose     = require("mongoose");
+
 var path         = require('path');	  
 // var routes       = require('./routes/routes.js');
 //contact form submission mongoose
@@ -62,12 +63,26 @@ app.post("/contact/submit", function(req, res, next) {
           }
     // Otherwise, send the new doc to the browserTOOK THIS ( res.send(doc);) OUT, STILL STORES IN MONGODB
     else {      
-      res.redirect('/');    
+      res.redirect('/');
+      alert('no data posted, please try again')    
     }
   });
 });
-// mongoose.connect("mongodb://localhost/portfoliojade");
-mongoose.connect("mongodb://danielryan:danielryan@ds145312.mlab.com:45312/portfoliojade", {useMongoClient: true});
+//mongoose.connect("mongodb://localhost/portfoliojade");
+mongoose.connect("mongodb://ds145312.mlab.com:45312/portfoliojade", { useMongoClient: true});
+// mongoose.connect(mongoDB);
+// var db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'MongoDB conn error'));
+
+ // mongoose.connect("mongodb://danielarnost:Kyanite@55@ds145312.mlab.com:45312/portfoliojade");
+// MONGOLAB_URI =' mongodb://danielarnost:Kyanite@55@ds145312.mlab.com:45312/portfoliojade'
+//  mongoose.connect(process.env.MONGOLAB_URI, function (err)
+//  {
+// if (err) {
+//   console.log('mongolab connection error')
+// }else{console.log('mongolab connected')}
+
+//  });
 
 var db = mongoose.connection;
 
